@@ -19,9 +19,7 @@ on:
 
 env:
   AWS_REGION: ap-northeast-1                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: b1o7r7e0           # set this to your Amazon ECR repository name
-  CONTAINER_NAME: checkoutservice           # set this to the name of the container in the
-                                               # containerDefinitions section of your task definition
+  ECR_REPOSITORY: checkoutservice           # set this to your Amazon ECR repository name
 
 permissions:
   id-token: write
