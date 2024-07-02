@@ -72,7 +72,7 @@ jobs:
 
     - name: Update Deployment manifests
       run: |
-          sed -i "s|image: public.ecr.aws/b1o7r7e0/checkoutservice:.*|image: public.ecr.aws/b1o7r7e0/checkoutservice:${{ github.sha }}" checkoutservice-manifest/manifest/checkoutservice.yaml
+          sed -i "s|image: public.ecr.aws/b1o7r7e0/checkoutservice:[^[:space:]]*|image: public.ecr.aws/b1o7r7e0/checkoutservice:${{ env.IMAGE_TAG }}|g" checkoutservice-manifest/manifest/checkoutservice.yaml
           cat checkoutservice-manifest/manifest/checkoutservice.yaml
 
     - name: Commit and push changes
