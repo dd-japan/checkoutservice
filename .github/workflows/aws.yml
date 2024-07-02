@@ -65,7 +65,10 @@ jobs:
       with:
         repository: dd-japan/checkoutservice-manifest
         token: ${{ secrets.GH_TOKEN }}
-        path: manifest
+        path: checkoutservice-manifest
+
+    - name: List files for debugging
+      run: ls -R checkoutservice-manifest
 
     - name: Update Deployment manifests
       run: |
