@@ -80,7 +80,6 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add manifest/checkoutservice.yaml
-          git -A
           git status
           git commit -m "Update image to public.ecr.aws/b1o7r7e0/checkoutservice:${{ env.IMAGE_TAG }}"
           git push origin main
